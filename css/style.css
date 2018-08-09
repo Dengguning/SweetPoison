@@ -1,0 +1,1195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 100%;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: "Baloo-Regular";
+    src: url(../fonts/Baloo-Regular.ttf);
+}
+
+header {
+    position: fixed;
+    display: block;
+    width: 100vw;
+    min-height: 60px;
+    z-index: 100;
+}
+
+.nav-bg {
+    display: none;
+}
+
+.nav-top {
+    position: absolute;
+    top: -180px;
+    width: 100vw;
+    min-height: 20px;
+    padding: 20px;
+    transition: all .1s;
+    background-color: #65d1fe;
+}
+
+.nav-top-x {
+    top: 0;
+}
+
+.menu-top-a {
+    text-decoration: none;
+}
+
+.menu-top {
+    font-family: 'Arial',sans-serif;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0,0,0,.8);
+}
+
+.nav-menu {
+    position: absolute;
+    top: -150px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 20px 20px;
+    transition: all .1s;
+    background-color: #65d1fe;
+}
+
+.nav-menu-x {
+    top: 150px;
+}
+
+.nav-menu-a {
+    padding-bottom: 5px;
+    font-family: 'Arial',sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+    line-height: 20px;
+    text-shadow: 0 0 2px rgba(0,0,0,.8);
+}
+
+.ham-box {
+    position: absolute;
+    top: 5px;
+    left: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    transform-origin: center;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.ham-a,
+.ham-b,
+.ham-c {
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    transition: all .1s;
+    box-shadow: 0 0 1px rgba(0,0,0,.8);
+}
+
+.ham-b {
+    top: 7px;
+}
+
+.ham-c {
+    top: 14px;
+}
+
+.logo-box {
+        display: none;
+}
+
+
+/* main */ 
+main {
+    width: 100vw;
+    min-height: 100vh;
+}
+
+/* home */
+
+.home-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr 1fr 2fr;
+    width: 100vw;
+    height: 105vh;
+    background: radial-gradient(ellipse at center, #fcf2ed 0%,#65d1fe 81%);
+}
+
+.home-content img {
+    grid-row: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sold-box {
+    grid-row: 4;
+    padding-top: 10px;
+}
+
+.sold-box h1 {
+    padding-left: -10vw;
+    font-family: 'Arial',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    color: #fff;
+    text-shadow: 0 0 2px rgba(0,0,0,.8);
+}
+
+.sold-box h1:nth-of-type(2) {
+    padding-left: 0;
+    font-family: 'Coustard', serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: #fff;
+}
+
+.sold-box h1:nth-of-type(3) {
+    padding-left: 25vw;
+    font-family: 'Baloo-Regular';
+    line-height: 1;
+    letter-spacing: 3px;
+    
+}
+
+
+
+/* promotie */
+
+.product-promotie-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    
+}
+
+.promotie-titel {
+    display: grid;
+    align-content: center;
+    width: 100%;
+    height: 200px;
+    padding-left: 30px;
+    font-family: 'Arial',sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+
+
+.promotie-link {
+    text-decoration: none;
+    transition: all .1s;
+}
+
+.promotie-kaart {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 80px 50px 30px 120px 100px;
+    background-color: #f3e0fe;
+}
+
+.promotie-kaart-foto {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    padding: 20vw 5vw;
+    background: radial-gradient(ellipse at center, #fff9f6 0%,#fec3a3 91%);
+}
+
+.promotie-kaart-foto img {
+    display: block;
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.promotie-kaart-foto-titel {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    padding-top: 45px;
+    padding-left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    line-height: 30px;
+}
+
+.promotie-kaart-foto-info {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    padding-left: 30px;
+    font-family: 'Arial',sans-serif;
+    color: #333;
+}
+
+.promotie-resultaat {
+    grid-column: 1 / span 2;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 5px 0;
+    font-family: 'Arial',sans-serif;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.promotie-resultaat p {
+    padding-left: 30px;
+}
+
+.promotie-productprijs {
+    grid-column: 1;
+    grid-row: 5;
+    display: grid;
+    align-items: end;
+    padding: 50px 0 5px 30px;
+    font-family: 'Arial',sans-serif;
+    font-size: 20px;
+    color: #333;;
+}
+
+.span-prij {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.promotie-bestel-btn {
+    grid-column: 1;
+    grid-row: 6;
+    padding: 5px 0 0 30px;
+}
+
+.promotie-bestel-btn h1 {
+    width: 100px;
+    padding: 8px;
+    font-family: 'Arial',sans-serif;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(255,255,255,.5);
+}
+
+/* productie galerij */
+
+
+.product-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-rows: auto auto;
+    margin-bottom: 100px;
+}
+
+.product-conten-link {
+    text-decoration: none;
+    transition: all .1s;
+}
+
+.product-kaart {
+    position: relative;
+    background-color: #fcf3d2;
+}
+
+.product-kaart-foto {
+    display: grid;
+    justify-content: center;
+    padding: 80px;
+    background: radial-gradient(ellipse at center, #fdf2f9 0%,#fcbfe7 91%);
+}
+
+.product-kaart-foto img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+.product-titel {
+    width: 100%;
+    padding: 15px 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-info {
+    width: 100%;
+    padding: 10px 30px;
+    font-family: 'Arial',sans-serif;
+    font-size: 12px;
+    color: #333;
+}
+
+.product-prijs-actie {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 50px;
+}
+
+.product-prijs {
+    grid-column: 1;
+    padding: 15px 30px 0;
+    font-family: 'Arial',sans-serif;
+    font-size: 12px;
+    color: #333;
+    line-height: 38px;
+}
+
+.span-product-prijs {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.product-actie {
+    grid-column: 1;
+    grid-row: 2;
+    padding: 10px 0 30px 30px;
+    font-family: 'Arial',sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 20px;
+    color: deeppink;;
+}
+
+.more-titel {
+    width: 100%;
+    height: 200px;
+    padding-left: 10vw;
+    font-family: 'Arial',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 200px;
+    text-decoration: none;
+    color: deeppink;
+}
+
+/* producten */
+
+.product-intro {
+    margin-bottom: 160px;
+}
+
+.winkel-content {
+    width: 100%;
+    min-height: 300px;
+}
+
+.winkel-titel {
+    width: 100%;
+    height: 120px;
+    background-color: #62d0fe;
+}
+
+.meer-product-link {
+    padding: 30px;
+    line-height: 150px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.winkel-kaart-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.winkel-kaart {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    min-height: 100px;
+    background-color: #fcf3d2;    
+}
+
+.item-name {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item-name p:nth-of-type(1) {
+    font-family: "Baloo-Regular";
+}
+
+.winkel-item {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(ellipse at center, #fdf2f9 0%,#fcbfe7 91%);
+}
+
+.winkel-item img {
+    display: block;
+    width: 60%;
+    height: 60%;
+    padding: 30px;
+    object-fit: contain;
+}
+
+
+.verzend-artikel {
+    grid-column: 1;
+    grid-row: 3;
+    padding-left: 30px;
+}
+
+.winkel-item-info {
+    grid-column: 1;
+    grid-row: 4;
+    padding-left: 30px;
+}
+
+.winkel-kaart .promotie-resultaat {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.winkel-kaart .promotie-resultaat p {
+    padding: 0 0 0 30px;;
+}
+
+.winkel-kaart .promotie-productprijs {
+    grid-column: 1;
+    grid-row: 6;
+    padding: 20px 0 0 30px;
+}
+
+.bestel-btn {
+    grid-column: 1;
+    grid-row: 7;
+    display: flex;
+    padding: 10px 0 25px 30px;
+}
+
+.bestel-btn h1 {
+    padding: 3px 6px;
+    background-color: rgba(255,255,255,.5);
+}
+
+.product-intro {
+    width: 100vw;
+    min-height: 200px;
+    background-color: #f6f6f6;
+}
+
+.product-intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+}
+
+.afdeling-info {
+    grid-column: 1 / span 2;
+    background-color: #fcf3d2;
+}
+
+.afdeling-nanm,
+.garantie-info {
+    padding: 30px;
+}
+
+.afdeling-nanm {
+    font-family: "Baloo-Regular";
+}
+
+.Winkel-score,
+.garantie-artikel {
+    min-height: 100px;
+    padding: 10px 30px;
+}
+
+.product-show {
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    grid-template-rows: auto auto;
+}
+
+.product-show-titel {
+    padding: 20px 30px;
+    color: #333;
+    background-color: #fcf3d2;
+}
+
+.product-show-imgs {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    background: radial-gradient(ellipse at center, #fdf2f9 0%,#fcbfe7 91%);
+}
+
+.product-show-imgs img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    object-fit: contain;
+}
+
+
+/*-------------- contact -------------------*/
+
+.contact-page {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 100vw;
+    min-height: 50vh;
+    background: radial-gradient(ellipse at center, #fcf2ed 0%,#65d1fe 81%);
+}
+
+.contact-page img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    object-fit: contain;
+}
+
+.contact-content {
+    margin-bottom: 200px;
+    padding: 0 10%;
+}
+
+.contact-kaart {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin-bottom: 5px;
+}
+
+/*---------- contact form ---------------------*/
+
+.contact-form {
+    margin: 20px 0;
+    color: #333;
+}
+
+.contact-titel {
+    width: 100%;
+    height: 200px;
+    font-family: 'Arial',sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 200px;
+    color: #333;
+}
+
+#contact-form {
+    width: 100%;
+    min-height: 100px;
+}
+
+.contact-info h2 {
+    font-family: "Baloo-Regular";
+}
+
+.contact-form h3 {
+    padding: 10px 0;
+    font-family: 'Arial',sans-serif;
+    color: #333;
+}
+
+fieldset {
+    width: 100%;
+    min-width: 100%;
+    margin: 0 0 10px;
+	padding: 0;
+	border: none;
+}
+
+#contact-form input[type="text"], 
+#contact-form input[type="email"], 
+#contact-form input[type="tel"], 
+#contact-form textarea {
+	width: 100%;
+	background:#FFF;
+	margin: 0 0 5px;
+	padding: 5px 0;
+    border: 1px solid #CCC;
+}
+
+#contact-form textarea {
+	height: 100px;
+    width: 100%;
+	resize: none;
+}
+
+#contact-form button[type="submit"] {
+	width: 80px;
+	margin: 0 0 5px;
+	padding: 5px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+    background: #e5e5e5;
+	border: none;
+    cursor: pointer;
+}
+
+#contact-form button[type="submit"]:active {
+    background-color: #e2e2e2; 
+}
+
+
+/*---------------- contact map -----------------*/
+
+.contact-map {
+    position: relative;
+    height: 0;
+    padding-bottom: 75%;
+    overflow: hidden;
+}
+
+.contact-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*----------------- footer ---------------------*/
+
+footer {
+    width: 100vw;
+    min-height: 200px;
+    background-color: #a7e4fd;
+}
+
+.footer-top {
+    width: 100%;
+    height: 60px;
+    margin-top: 30px;
+    
+}
+
+.dienst-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-template-rows: auto auto;
+    margin-top: 30px;
+    padding: 0 10%;
+    
+}
+
+.klantenservice {
+    margin-bottom: 15px;
+    font-family: 'Arial',sans-serif;
+    
+}
+
+.klantenservice-link {
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.payment-info {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    margin: 50px 0;
+    padding: 0 10%;
+}
+
+.pay-icon {
+    display: block;
+    height: 30px;
+    margin-left: 20px;
+}
+
+.pay-icon img {
+    display: block;
+    height: 60%;
+    object-fit: contain;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.footer-logo img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+footer p {
+    padding: 30px 0;
+    font-size: 12px;
+}
+
+/*---------/////-----------*/
+
+/*----- media query-------*/
+
+@media all and (min-width: 500px) {
+    .product-show {
+        grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+    }
+}
+
+
+@media all and (min-width: 720px) {
+    /* header */
+    
+    header {
+        position: relative;
+        
+    }
+    
+    .nav-top {
+        top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100vw;
+        padding: 3px 5%;
+        background-color: #3ec5fd;
+        transition: all .1s;
+    }
+    
+    .menu-top-a {
+        grid-column: 1;
+        font-size: 16px;
+        padding-left: 20px;
+    }
+    
+    .nav-menu {
+        top: 26px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding: 20px 5%;
+        background-color: #62d0fe;
+    }
+    
+    .nav-menu-a {
+        margin-left: 10px;
+        padding: 0 5px;
+        font-size: 20px;
+        line-height: 32px;
+        transition: all .1s;
+    }
+        
+    .nav-menu-a:hover {
+        background-color: rgba(255,255,255,.2);
+    }
+    .menu-box {
+        padding-left: 0;
+        background-color: rgba(255,255,255,0);
+    }
+    
+    .ham-box {
+        display: none;
+    }
+        
+    /* logo */
+        
+    /* home   */
+    
+    
+    /*----homecontent-----*/
+    
+    .sold-box h1 {
+        padding: 0 0 0 0;
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    .sold-box h1:nth-of-type(2) {
+        padding-left: 26px;
+        font-size: 1.5vw;
+    }
+    
+    .sold-box h1:nth-of-type(3) {
+        padding-left: 10vw;
+    }
+    
+    /*----------------- promotie ------------------*/
+    .product-promotie-content {
+        
+    }
+    
+    .promotie-kaart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(11,80px);
+        background-color: #f3e0fe;
+    }
+    
+    .promotie-kaart-foto {
+        grid-column: 1;
+        grid-row: 1 / span 11;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        padding: 0;
+        background: radial-gradient(ellipse at center, #fff9f6 0%,#fec3a3 91%);
+    }
+    
+    .promotie-kaart-foto img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .promotie-kaart-foto-titel {
+        grid-column: 2;
+        grid-row: 4;
+        padding: 0 0 0 50px;
+        text-align: left;
+        line-height: 80px;
+    }
+    
+    .promotie-kaart-foto-info {
+        grid-column: 2;
+        grid-row: 5;
+        padding: 0 0 0 50px;
+        text-align: left;
+    }
+    
+    .promotie-resultaat {
+        grid-column: 2;
+        grid-row: 6;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2;
+        padding: 0 0 0 50px;
+        text-align: left;
+    }
+    
+    .promotie-resultaat p {
+        padding: 0;
+    }
+    
+    .promotie-productprijs {
+        grid-column: 2;
+        grid-row: 7;
+        padding: 0 0 0 50px;
+        text-align: left;
+        line-height: 80px;
+    }
+    
+    .promotie-bestel-btn {
+        grid-column: 2;
+        grid-row: 8;
+        display: flex;
+        padding: 0 0 0 50px;
+    }
+    
+    .promotie-bestel-btn h1 {
+        height: 40px;
+        text-align: left;
+    }
+    
+    /*----------promotie (2)---------*/
+    
+    .promotie-foto-right {
+        grid-column: 2;
+        grid-row: 1 / span 11;
+        display: grid;
+        justify-content: center;
+    }
+    
+    .promotie-kaart-foto-titel-left {
+        grid-column: 1;
+        grid-row: 4;
+        padding: 0 50px 0 0;
+        text-align: right;
+        line-height: 80px;
+    }
+    
+    .promotie-kaart-foto-info-left {
+        grid-column: 1;
+        grid-row: 5;
+        padding: 0 50px 0 0;
+        text-align: right;
+    }
+    
+    .promotie-resultaat-left {
+        grid-column: 1;
+        grid-row: 6;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2;
+        padding: 0 50px 0 0;
+        text-align: right;
+    }
+    
+    .promotie-resultaat-left p {
+        padding: 0;
+    }
+    
+    .promotie-productprijs-left {
+        grid-column: 1;
+        grid-row: 7;
+        padding: 0 50px 0 0;
+        text-align: right;
+        line-height: 80px;
+    }
+    
+    .promotie-bestel-btn-left {
+        grid-column: 1;
+        grid-row: 8;
+        justify-content: flex-end;
+        padding: 0 50px 0 0;
+    }
+    
+    .promotie-bestel-btn-left h1 {
+        text-align: right;
+        
+    }
+    
+    
+     /*---- // ----*/
+    
+    /*--------------- product galerij ----------*/
+    .product-galerij { 
+        padding: 0;
+    }
+    
+    .product-content {
+        grid-gap: 20px;
+        width: 100vw;
+        padding: 30px 50px 30px 30px;
+    }
+    
+    /*---------- producten ----------------*/
+    .winkel-content {
+        margin-top: 38px;
+    }
+    
+    .winkel-titel {
+        width: 100vw;
+        height: 100px;
+        background-color: #fff;
+    }
+    
+    .meer-product-link {
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 100px;
+        color: #333;
+    }
+    
+    .winkel-kaart {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 100px 60px 60px 60px 60px 100px 100px;
+    }
+
+    .item-name {
+        grid-column: 2 / span 2;
+        grid-row: 2;
+        padding-left: 30px;
+    }
+    
+    .verzend-artikel {
+        grid-column: 2 / span 2;
+        grid-row: 3;
+        padding-left: 30px;
+    }
+    
+    .winkel-item-info {
+        grid-column: 2;
+        grid-row: 4;
+        padding-left: 30px;
+    }
+    
+    .winkel-item {
+        grid-column: 1;
+        grid-row: 1 / span 7;
+    }
+
+    .winkel-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .winkel-kaart .promotie-resultaat {
+        grid-column: 2 / span 2;
+        grid-row: 5;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+    }
+    
+    .winkel-kaart .promotie-resultaat p {
+        padding: 0 0 0 30px;
+    }
+    
+    .winkel-kaart .promotie-resultaat p:nth-of-type(2) {
+        padding: 0;
+    }
+    
+    .winkel-kaart .promotie-productprijs {
+        grid-column: 2;
+        grid-row: 6;
+    }
+
+    .bestel-btn {
+        grid-column: 3;
+        grid-row: 6;
+        align-items: flex-end;
+        padding: 0 0 20px 0;
+    }
+    
+    
+    .bestel-btn h1 {
+        height: 35px;
+        padding: 5px;
+        color: #333;
+        background-color: rgba(255,255,255,.8);
+    }
+    
+    .product-intro {
+        padding: 0 0;
+    }
+    
+    .product-intro-content {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto;
+        grid-column-gap: 0;
+    } 
+    
+    .afdeling-info {
+        grid-column: 1;
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        }
+    
+    .product-show {
+        grid-column: 2;
+        grid-gap: 20px;
+        padding: 100px 35px 0 20px;
+        background-color: #f6f6f6;
+    }
+    
+    .product-show-titel {
+        padding: 30px;
+        background: #fcbfe7;
+    }
+    
+        
+        
+    /*----------------- contact ----------------*/
+    
+    .contact-content {
+        padding: 0 15%;
+    }
+    
+    .contact-kaart {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px auto;
+        grid-column-gap: 20px;
+    }
+    
+    .contact-info {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .contact-form {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .contact-map {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+        height: 100%;
+        padding-bottom: 0;
+        overflow: hidden;
+    }
+    
+    /* footer */
+    .dienst-info {
+        padding: 0 15%;
+    }
+
+    
+}
+
+
+@media all and (min-width: 1060px) {
+    
+    .product-show-titel  {
+        background: radial-gradient(ellipse at center, #fdf2f9 0%,#fcbfe7 91%);
+    }
+    
+}
+
+
+/*-----------//////
+
+#a7e4fd
+#62d0fe
+#fcbfe7
+#fcf3d2
+background: radial-gradient(ellipse at center, #fcf2ed 0%,#65d1fe 81%);
+
+background: radial-gradient(ellipse at left 30% center, #fff9f6 0%,#fec3a3 91%);
+
+
+
+
+
+
+----------*/
