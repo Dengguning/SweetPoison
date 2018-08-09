@@ -288,11 +288,13 @@ main {
 .promotie-bestel-btn {
     grid-column: 1;
     grid-row: 6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     padding: 5px 0 0 30px;
 }
 
 .promotie-bestel-btn h1 {
-    width: 100px;
     padding: 8px;
     font-family: 'Arial',sans-serif;
     font-weight: bold;
@@ -492,11 +494,14 @@ main {
     grid-column: 1;
     grid-row: 7;
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     padding: 10px 0 25px 30px;
 }
 
 .bestel-btn h1 {
     padding: 3px 6px;
+    color: #333;
     background-color: rgba(255,255,255,.5);
 }
 
@@ -926,11 +931,11 @@ footer p {
         grid-column: 2;
         grid-row: 8;
         display: flex;
+        justify-content: flex-start;
         padding: 0 0 0 50px;
     }
     
     .promotie-bestel-btn h1 {
-        height: 40px;
         text-align: left;
     }
     
@@ -983,6 +988,7 @@ footer p {
     .promotie-bestel-btn-left {
         grid-column: 1;
         grid-row: 8;
+        display: flex;
         justify-content: flex-end;
         padding: 0 50px 0 0;
     }
@@ -1027,7 +1033,7 @@ footer p {
     .winkel-kaart {
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
-        grid-template-rows: 100px 60px 60px 60px 60px 100px 100px;
+        grid-template-rows: 100px 60px 60px 100px 60px 100px 100px;
     }
 
     .item-name {
@@ -1084,15 +1090,13 @@ footer p {
     .bestel-btn {
         grid-column: 3;
         grid-row: 6;
-        align-items: flex-end;
-        padding: 0 0 20px 0;
+        justify-content: flex-start;
+        padding: 0 0 10px 0;
     }
     
     
     .bestel-btn h1 {
-        height: 35px;
         padding: 5px;
-        color: #333;
         background-color: rgba(255,255,255,.8);
     }
     
