@@ -2,6 +2,9 @@
 
 ## About the Project
 
+* to build a responsive site by CSS Grid Layout Module.
+* to experiment a minimalist design style for web.
+
 ## Concept and Design of UI
 
 ### Moodboard
