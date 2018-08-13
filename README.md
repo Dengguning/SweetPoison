@@ -1,9 +1,11 @@
 # SweetPoison
 
 ## About the Project
-
+The project is used to realise the following goals:
 * to build a responsive site by CSS Grid Layout Module.
 * to experiment a minimalist design style for web.
+
+[Show the project](https://dengguning.github.io/SweetPoison/index.html "Link to SweetPoison")
 
 ## Concept and Design of UI
 
