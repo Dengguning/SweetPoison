@@ -1,5 +1,7 @@
 # SweetPoison
 
+## About the Project
+
 ## Concept and Design of UI
 
 ### Moodboard
